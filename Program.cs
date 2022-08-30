@@ -79,25 +79,44 @@ YesOrNo(num);
 
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
-// A (3,6,8); B (2,1,-7), -> 15.84
+/*
 
-double xA = 7;
-double yA = -5;
-double zA = 0;
-
-double xB = 1;
-double yB = -1;
-double zB = 9;
-
-double ac   = yA - yB ;
-double bc  = Math.Sqrt ((xA - xB) * (xA - xB) + (zA - zB)*(zA - zB));
-double ab  = Math.Sqrt ((ac*ac) + (bc*bc));
+double Proekcia (double xA, double yA, double zA, double xB, double yB, double zB) // создание проекции 
+// и треугольника на минимальной точке y (на плоскости XZ)
+{
+    double ac   = yA - yB ;
+    double bc  = Math.Sqrt ((xA - xB) * (xA - xB) + (zA - zB)*(zA - zB));
+    double ab  = Math.Sqrt ((ac*ac) + (bc*bc));
+    return ab;
+}
 
 
-Console.WriteLine(ab);
+Console.Write("Введите пожалуйста координату Х точки А: ");
+double xxA = Convert.ToDouble(Console.ReadLine());
 
+Console.Write("Введите пожалуйста координату Y точки А: ");
+double yyA = Convert.ToDouble(Console.ReadLine());
 
+Console.Write("Введите пожалуйста координату Z точки А: ");
+double zzA = Convert.ToDouble(Console.ReadLine());
 
+Console.Write("Введите пожалуйста координату Х точки B: ");
+double xxB = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Введите пожалуйста координату Y точки B: ");
+double yyB = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Введите пожалуйста координату Z точки B: ");
+double zzB = Convert.ToDouble(Console.ReadLine());
+
+double resultat = Proekcia(xxA, yyA, zzA, xxB, yyB, zzB);
+
+Console.WriteLine(" ");
+Console.WriteLine($" -> {resultat}");
+Console.WriteLine(" ");
+Console.WriteLine("Конец программы.");
+
+*/
 
 
 //_________________________________Задание_3___________________________
